@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Peach"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="161dp"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="109dp"
+        android:fontFamily="@font/artifika"
+        android:text="EXPENSES"
+        android:textColor="#CB997E"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="72dp"
+        android:layout_weight="1"
+        android:background="@drawable/dropdown"
+        android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:textColorHint="#8CFFFFFF"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Select Date"
+        android:padding="10dp"
+        android:textColor="#FFE8D6"
+        android:textSize="20sp"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <!--    <EditText-->
+<!--        android:id="@+id/dorc"-->
+<!--        android:layout_width="124dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginTop="376dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@drawable/rounded_edittext"-->
+<!--        android:ems="10"-->
+<!--        android:fontFamily="@font/poppins_light"-->
+<!--        android:inputType="text"-->
+<!--        android:maxHeight="50px"-->
+<!--        android:text=""-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="#FFE8D6"-->
+<!--        app:layout_constraintHeight_default="wrap"-->
+<!--        app:layout_constraintHorizontal_bias="0.714"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/Date"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="72dp"
+        android:layout_weight="1"
+        android:textColorHint="#8CFFFFFF"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Description"
+        android:inputType="text"
+        android:maxHeight="50px"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#FFE8D6"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    <EditText-->
+<!--        android:id="@+id/cred"-->
+<!--        android:layout_width="124dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_below="@+id/description"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:layout_marginTop="41dp"-->
+<!--        android:layout_marginEnd="72dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:hint="Credited"-->
+<!--        android:textColorHint="#8CFFFFFF"-->
+<!--        android:background="@drawable/rounded_edittext"-->
+<!--        android:ems="10"-->
+<!--        android:fontFamily="@font/poppins_light"-->
+<!--        android:inputType="number"-->
+<!--        android:maxHeight="50px"-->
+<!--        android:padding="10dp"-->
+<!--        android:text=""-->
+<!--        android:textColor="#FFE8D6"-->
+<!--        app:layout_constraintHeight_default="wrap"-->
+<!--        app:layout_constraintHorizontal_bias="0.714"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="124dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/credited"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:fontFamily="@font/poppins_light"
+        android:hint="Amount"
+        android:inputType="number"
+        android:maxHeight="50px"
+        android:padding="10dp"
+        android:text=""
+
+        android:textColor="#FFE8D6"
+        android:textColorHint="#8CFFFFFF"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/credited"
+        android:layout_width="124dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/description"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="72dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/poppins_light"
+        android:spinnerMode="dropdown"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modeofpayment"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="13dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="20dp"
+        app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
+
+    <Spinner
+        android:id="@+id/type"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/amount"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="72dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_edittext"
+        android:fontFamily="@font/poppins_light"
+        android:spinnerMode="dropdown"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/modeofpayment"
+        android:layout_width="259dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/type"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="72dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_edittext"
+        android:spinnerMode="dropdown"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</RelativeLayout>

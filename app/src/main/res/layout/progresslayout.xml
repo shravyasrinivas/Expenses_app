@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="45dp"
+    android:gravity="center"
+    tools:context=".CustomProgressButton">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardView"
+        android:layout_height="60dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/Brown"
+        app:cardCornerRadius="35dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/proglayout"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/submitBtn"
+                android:id="@+id/bar"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/white"
+                android:layout_centerVertical="true"
+                tools:targetApi="LOLLIPOP">
+            </ProgressBar>
+            <TextView
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:fontFamily="@font/artifika"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="20sp">
+
+            </TextView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
