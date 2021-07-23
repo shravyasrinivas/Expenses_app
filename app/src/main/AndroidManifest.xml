@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppToGoogleSheets"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CustomProgressButton"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Additem" />
         <activity android:name=".Boardingscreen">

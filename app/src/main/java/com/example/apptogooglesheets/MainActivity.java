@@ -123,8 +123,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if(v==btnadd){
-            //startActivity(new Intent(getApplicationContext(),CustomProgressButton.class));
-            //Intent intent=new Intent(MainActivity.this,CustomProgressButton.class);
             AlertDialog dialog;
             final int Dialog_show_time=5000;
             String date=mDisplayDate.getText().toString();
@@ -144,15 +142,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             @Override
                             public void onResponse(String response) {
                                 Log.d("CREATION", "Successful post" + response);
-//                                ProgressButton progressButton=new ProgressButton(MainActivity.this,v);
-//                                progressButton.ButtonActivated();
-//                                Handler handler=new Handler();
-//                                handler.postDelayed(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        progressButton.Btnfinished();
-//                                    }
-//                                },3000);
 //                                ProgressBar bar = (ProgressBar) loading.findViewById(android.R.id.progress);
 //                                //Getting a DONE(new) drawable from resources
 //                                Drawable drawable = getResources().getDrawable(R.drawable.ic_baseline_done_24);
