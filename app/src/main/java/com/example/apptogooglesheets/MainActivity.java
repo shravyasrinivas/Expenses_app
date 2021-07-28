@@ -1,38 +1,19 @@
 package com.example.apptogooglesheets;
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Rect;
-import android.graphics.drawable.Animatable;
-import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -44,6 +25,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -56,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      EditText desp,amt;
      Spinner dropdown2,dropdown3,dropdown1;
      TextView mDisplayDate;
+     TextView timeField;
      private DatePickerDialog.OnDateSetListener mDateSetListener;
      ImageButton btnadd;
 
@@ -101,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
 
+
                 DatePickerDialog dialog = new DatePickerDialog(
                         MainActivity.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth,
@@ -117,6 +101,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 month=month+1;
                 String date = day + "/" + month + "/" + year;
                 mDisplayDate.setText(date);
+                SimpleDateFormat format=new SimpleDateFormat("HH:mm:ss");
+                Calendar cal2 = Calendar.getInstance();
+                String time=format.format(cal2.getTime());
+                timeField =findViewById(R.id.time);
+                timeField.setText(time);
             }
         };
     }
@@ -126,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             AlertDialog dialog;
             final int Dialog_show_time=5000;
             String date=mDisplayDate.getText().toString();
+            String time= timeField.getText().toString();
             String descp = desp.getText().toString();
             String amnt = amt.getText().toString();
             String cred=String.valueOf(dropdown1.getSelectedItem());
@@ -136,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog= new SpotsDialog(this,R.style.Custom);
                 dialog.show();
                 //final ProgressDialog loading = ProgressDialog.show(this, "Adding Item", "Please wait");
-                String sheetsURL = "https://script.google.com/macros/s/AKfycbxfnpEmztQiTRatsc1vw6jSmeK_NvXAN3WIaF4IqxNtaaXl3Nha5O-2cR6lHduZ-Pmr/exec";
+                String sheetsURL = "https://script.google.com/macros/s/AKfycbwMsV1JkoNIK2cXwYdxC0GPB0dA2WyxS1a4J1ZRwaiAECJIc2WqLRoEdWISo6TpxCSX/exec";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, sheetsURL,
                         new Response.Listener<String>() {
                             @Override
@@ -158,6 +148,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 desp.setText("");
                                 amt.setText("");
                                 mDisplayDate.setText("");
+                                timeField.setText("");
                                 Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Successfully Added ", Snackbar.LENGTH_LONG);
                                 snackbar.show();
                                 View sbView = snackbar.getView();
@@ -188,6 +179,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         params.put("credited", cred);
                         params.put("type", selectedText);
                         params.put("modeOfPayment", selectedText2);
+                        params.put("time",time);
 
                         Log.d("CREATION", "Creating params");
                         return params;
