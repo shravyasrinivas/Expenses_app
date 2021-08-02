@@ -7,6 +7,7 @@
     android:background="@color/Peach"
     tools:context=".MainActivity">
 
+
     <TextView
         android:layout_width="161dp"
         android:layout_height="54dp"
@@ -235,7 +236,6 @@
         android:layout_height="48dp"
         android:layout_below="@+id/type"
         android:layout_alignParentEnd="true"
-
         android:layout_marginTop="41dp"
         android:layout_marginEnd="72dp"
         android:layout_weight="1"
@@ -246,6 +246,45 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/view"
+        android:layout_width="100dp"
+        android:layout_height="104dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="611dp"
+        android:layout_marginEnd="282dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="20dp"
+        app:srcCompat="@drawable/ic_baseline_pageview_24" />
+
+    <TextView
+        android:id="@+id/viewtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="682dp"
+        android:layout_marginEnd="287dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="View Google Sheet"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/viewitems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modeofpayment"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="150dp"
+        android:text="View items"
+        android:textColor="@color/white"
+        android:background="#B0B8A0"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_light"/>
 
 
 </RelativeLayout>

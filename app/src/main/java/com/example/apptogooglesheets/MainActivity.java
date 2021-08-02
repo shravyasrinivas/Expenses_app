@@ -1,12 +1,15 @@
 package com.example.apptogooglesheets;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      TextView timeField;
      private DatePickerDialog.OnDateSetListener mDateSetListener;
      ImageButton btnadd;
+     Button btnviewitems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btnadd=(ImageButton)findViewById(R.id.submit);
+        btnviewitems = (Button)findViewById(R.id.viewitems);
         desp = (EditText)findViewById(R.id.description);
         amt = (EditText)findViewById(R.id.amount);
         dropdown1=(Spinner) findViewById(R.id.credited);
@@ -74,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         adapter3.setDropDownViewResource(R.layout.spinner_list);
 
         btnadd.setOnClickListener(this);
+        btnviewitems.setOnClickListener(this);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,7 +114,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 timeField.setText(time);
             }
         };
+        (findViewById(R.id.view)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://docs.google.com/spreadsheets/d/1jQwMlnEuTFV7VBco0SxH-hM6hbsIJbEDgkQ_gz6JrF4/edit#gid=875889510";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+        btnviewitems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    System.out.println("Button Clicked");
+                    Intent activity2Intent = new Intent(getApplicationContext(), ListItem.class);
+                    startActivity(activity2Intent);
+                }
+        });
     }
+
     @Override
     public void onClick(View v) {
         if(v==btnadd){
@@ -126,7 +150,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog= new SpotsDialog(this,R.style.Custom);
                 dialog.show();
                 //final ProgressDialog loading = ProgressDialog.show(this, "Adding Item", "Please wait");
-                String sheetsURL = "https://script.google.com/macros/s/AKfycbwMsV1JkoNIK2cXwYdxC0GPB0dA2WyxS1a4J1ZRwaiAECJIc2WqLRoEdWISo6TpxCSX/exec";
+             //   String sheetsURL="https://script.google.com/macros/s/AKfycbwYAiT8ER0SGLjax5wcgpiDgYTI-YA7OY80moTTP76GI11fauDciHiYkLiIEdOge0yg/exec";
+                String sheetsURL = "https://script.google.com/macros/s/AKfycbyQkBQ6HN47uUSByRB1I6BUpEvpSKhCIn_7n1pmaWeP6ffQEVScO_OKUE5tHiLbt0U/exec";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, sheetsURL,
                         new Response.Listener<String>() {
                             @Override
@@ -202,7 +227,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 snackbar.setTextColor(Color.parseColor("#FFFFFF"));
 
             }
+//            if(v==btnviewitems){
+////                Intent intent = new Intent(getApplicationContext(),ListItem.class);
+////                startActivity(intent);
+//                Intent i = new Intent(MainActivity.this,ListItem.class);
+//                startActivity(i);
+//            }
         }
 
     }
+
 }
