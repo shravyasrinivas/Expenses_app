@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AppToGoogleSheets"
         android:usesCleartextTraffic="true">
         <activity android:name=".MainActivity" />
-        <activity android:name=".Additem" />
+        <activity android:name=".ListItem"/>
         <activity android:name=".Boardingscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -19,8 +19,13 @@
         <item name="DialogSpotColor">@color/Brown</item>
         <item name="DialogSpotCount">4</item>
     </style>
+    <style name="progress" parent="android:Theme.DeviceDefault.Dialog">
+        <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="DialogTitleText">Please Wait</item>
+        <item name="DialogSpotColor">@color/Brown</item>
+        <item name="DialogSpotCount">4</item>
+    </style>
     <style name="Theme.AppToGoogleSheets.NoActionBar">
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
