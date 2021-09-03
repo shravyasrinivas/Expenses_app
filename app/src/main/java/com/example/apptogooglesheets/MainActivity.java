@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dropdown1.setAdapter(adapter1);
         adapter1.setDropDownViewResource(R.layout.spinner_list);
 
-        String[] items3 = new String[]{"Cash", "CB343","Citibank credit card","Gpay SBI,Madi","Gpay,Shravya","Madhavi Gpay","Metro Card","SBI,Madipakkam","Shravya SBI Debit card"};
+        String[] items3 = new String[]{"Cash", "CB343","Citibank credit card","Gpay SBI,Madi","Gpay,Shravya","Madhavi Gpay","Metro Card","SBI,Madipakkam","Shravya SBI Debit card","PhonePay(SBI Alandur)","Shravya PayTM"};
         ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this,R.layout.spinner_main, items3);
         dropdown3.setAdapter(adapter3);
         adapter3.setDropDownViewResource(R.layout.spinner_list);
