@@ -45,4 +45,13 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver.921-1.6"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="654dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
