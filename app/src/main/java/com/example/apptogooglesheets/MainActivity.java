@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 month=month+1;
                 String date = day + "/" + month + "/" + year;
                 mDisplayDate.setText(date);
-                SimpleDateFormat format=new SimpleDateFormat("HH:mm:ss");
+                SimpleDateFormat format=new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
                 Calendar cal2 = Calendar.getInstance();
                 String time=format.format(cal2.getTime());
                 timeField =findViewById(R.id.time);
