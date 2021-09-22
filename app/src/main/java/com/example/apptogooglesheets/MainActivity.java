@@ -1,4 +1,5 @@
 package com.example.apptogooglesheets;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -145,13 +146,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String cred=String.valueOf(dropdown1.getSelectedItem());
             String selectedText = String.valueOf(dropdown2.getSelectedItem());
             String selectedText2 = String.valueOf(dropdown3.getSelectedItem());
-            boolean correct = !date.isEmpty() && !descp.isEmpty()  &&!amnt.isEmpty() ;
+            @SuppressLint({"NewApi", "LocalSuppress"}) boolean correct = !date.isEmpty() && !descp.isEmpty()  &&!amnt.isEmpty() ;
             if (correct) {
                 dialog= new SpotsDialog(this,R.style.Custom);
                 dialog.show();
                 //final ProgressDialog loading = ProgressDialog.show(this, "Adding Item", "Please wait");
              //   String sheetsURL="https://script.google.com/macros/s/AKfycbwYAiT8ER0SGLjax5wcgpiDgYTI-YA7OY80moTTP76GI11fauDciHiYkLiIEdOge0yg/exec";
-                String sheetsURL = "https://script.google.com/macros/s/AKfycbw-3-QZk2zgDs7NzvEfLwyPh2sL12gsja3p7297Pw-VNqM45_Ivcrz3hbtbPdgl8JeB/exec";
+                String sheetsURL = "https://script.google.com/macros/s/AKfycbyxIgvUvOPxjgk_zqJPwkiy_GOisXAa_35n_w5CML7UyIAVX4fnHl94ZlLi6c4iZvM7/exec";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, sheetsURL,
                         new Response.Listener<String>() {
                             @Override
