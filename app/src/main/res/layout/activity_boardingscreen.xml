@@ -15,7 +15,8 @@
         android:layout_marginTop="108dp"
         android:fontFamily="@font/artifika"
         android:text="Manage your expenses with ease🤩
-                                                    Direct upload to Google sheets▶"
+                                                    Direct upload to Google sheets▶
+                                                                                Ver.921-1.7"
         android:textColor="#CB997E"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -45,13 +46,5 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ver.921-1.6"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="654dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
