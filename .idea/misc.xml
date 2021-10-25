@@ -3,10 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_boardingscreen.xml" value="0.22" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_boardingscreen.xml" value="0.1" />
         <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_main.xml" value="0.1490036231884058" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
