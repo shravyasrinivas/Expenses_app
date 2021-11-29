@@ -1,5 +1,5 @@
-var ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1jQwMlnEuTFV7VBco0SxH-hM6hbsIJbEDgkQ_gz6JrF4/edit?pli=1#gid=2010401578");
-var sheet = ss.getSheetByName('September 2021'); 
+var ss = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1jQwMlnEuTFV7VBco0SxH-hM6hbsIJbEDgkQ_gz6JrF4/edit?pli=1#gid=757043985");
+var sheet = ss.getSheetByName('December 2021'); 
 
 function doPost(e){
 var action = e.parameter.action;
@@ -55,9 +55,9 @@ function getItems(e){
     var row     = rows[r],
         record  = {};
     record['date'] = row[0];
+    da=record['date'];
     record['description']=row[1];
     record['amount']=row[2];
-    
     data.push(record);
     
    }
