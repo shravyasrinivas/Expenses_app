@@ -16,7 +16,7 @@
         android:fontFamily="@font/artifika"
         android:text="Manage your expenses with ease🤩
                                                     Direct upload to Google sheets▶
-                                                                                Ver.1121-1.8"
+                                                                                Ver.1221-1.9"
         android:textColor="#CB997E"
         android:textSize="18sp"
         android:textStyle="bold"
