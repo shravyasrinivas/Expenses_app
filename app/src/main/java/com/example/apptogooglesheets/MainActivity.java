@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dropdown1.setAdapter(adapter1);
         adapter1.setDropDownViewResource(R.layout.spinner_list);
 
-        String[] items3 = new String[]{"Cash", "CB343","Citibank credit card","Gpay SBI,Madi","Gpay,Shravya","Madhavi Gpay","Metro Card","SBI,Madipakkam","Shravya SBI Debit card","PhonePay(SBI Alandur)","Shravya PayTM"};
+        String[] items3 = new String[]{"Cash", "IT","CB343","Citibank credit card","CB2199","SBI,Madhavi","SBI,Shravya","Alandur SBI","Gpay SBI,Madi","Gpay,Shravya","Madhavi Gpay","Metro Card","SBI,Madipakkam","Shravya SBI Debit card","PhonePay(SBI Alandur)","Shravya PayTM"};
         ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this,R.layout.spinner_main, items3);
         dropdown3.setAdapter(adapter3);
         adapter3.setDropDownViewResource(R.layout.spinner_list);
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         (findViewById(R.id.view)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://docs.google.com/spreadsheets/d/1jQwMlnEuTFV7VBco0SxH-hM6hbsIJbEDgkQ_gz6JrF4/edit#gid=462020559";
+                String url = "https://docs.google.com/spreadsheets/d/1jQwMlnEuTFV7VBco0SxH-hM6hbsIJbEDgkQ_gz6JrF4/edit#gid=1197247059";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog.show();
                 //final ProgressDialog loading = ProgressDialog.show(this, "Adding Item", "Please wait");
              //   String sheetsURL="https://script.google.com/macros/s/AKfycbwYAiT8ER0SGLjax5wcgpiDgYTI-YA7OY80moTTP76GI11fauDciHiYkLiIEdOge0yg/exec";
-                String sheetsURL = "https://script.google.com/macros/s/AKfycbx4CT1uKs2uYSrk8kY0wCG4NXp-a3lyHYbYigegpVhhfOANMhbsrscwPp9l0PTizx7W/exec";
+                String sheetsURL = "https://script.google.com/macros/s/AKfycbxByLWiCyeSRI5YG7lVY03QumbobA-zoHw8NGAi-hRd4rLMpcqftQwAx_ULA422YeA/exec";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, sheetsURL,
                         new Response.Listener<String>() {
                             @Override
