@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dropdown3 = (Spinner)findViewById(R.id.modeofpayment);
 
 
-        String[] items2 = new String[]{"Household", "Rent","Office","Medicine"};
+        String[] items2 = new String[]{"Household", "Rent","Office","Medicine","IT"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, R.layout.spinner_main, items2);
         dropdown2.setAdapter(adapter2);
         adapter2.setDropDownViewResource(R.layout.spinner_list);
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dropdown1.setAdapter(adapter1);
         adapter1.setDropDownViewResource(R.layout.spinner_list);
 
-        String[] items3 = new String[]{"Cash", "IT","CB343","Citibank credit card","CB2199","SBI,Madhavi","SBI,Shravya","Alandur SBI","Gpay SBI,Madi","Gpay,Shravya","Madhavi Gpay","Metro Card","SBI,Madipakkam","Shravya SBI Debit card","PhonePay(SBI Alandur)","Shravya PayTM"};
+        String[] items3 = new String[]{"Cash","CB343","Gpay,CB343","Madhavi PayTM","Shravya PayTM","Madhavi PhonePay","Shravya PhonePay","Citibank credit card","CB2199","SBI,Madhavi","SBI,Shravya","Alandur SBI","Gpay SBI,Madi","Gpay,Shravya","Madhavi Gpay","Metro Card","SBI,Madipakkam","Shravya SBI Debit card","PhonePay(SBI Alandur)"};
         ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this,R.layout.spinner_main, items3);
         dropdown3.setAdapter(adapter3);
         adapter3.setDropDownViewResource(R.layout.spinner_list);
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         (findViewById(R.id.view)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://docs.google.com/spreadsheets/d/1pOJxPkQqYgGgWIonP3GPh7Up1YYBPGeReddTJi3xo1A/edit#gid=479366799";
+                String url = "https://docs.google.com/spreadsheets/d/1pOJxPkQqYgGgWIonP3GPh7Up1YYBPGeReddTJi3xo1A/edit#gid=252917701";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog.show();
                 //final ProgressDialog loading = ProgressDialog.show(this, "Adding Item", "Please wait");
              //   String sheetsURL="https://script.google.com/macros/s/AKfycbwYAiT8ER0SGLjax5wcgpiDgYTI-YA7OY80moTTP76GI11fauDciHiYkLiIEdOge0yg/exec";
-                String sheetsURL = "https://script.google.com/macros/s/AKfycbwXjsyW05G5lD5kahnz3GvwthncCaIn4rzoxIKu0uBOTS0KVo43Ud0Yo5v0KP-3LFYO/exec";
+                String sheetsURL = "https://script.google.com/macros/s/AKfycbwNWFL0eWhLGpAeziiP9LR9FwpoWKA6zsM9xF_sCzASZAwNyWmne_jpkx7DRtXJR28j/exec";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, sheetsURL,
                         new Response.Listener<String>() {
                             @Override
