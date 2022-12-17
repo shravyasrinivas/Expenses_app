@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         (findViewById(R.id.view)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://docs.google.com/spreadsheets/d/1pOJxPkQqYgGgWIonP3GPh7Up1YYBPGeReddTJi3xo1A/edit#gid=252917701";
+                String url = "https://docs.google.com/spreadsheets/d/1pOJxPkQqYgGgWIonP3GPh7Up1YYBPGeReddTJi3xo1A/edit#gid=1313835725";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog.show();
                 //final ProgressDialog loading = ProgressDialog.show(this, "Adding Item", "Please wait");
              //   String sheetsURL="https://script.google.com/macros/s/AKfycbwYAiT8ER0SGLjax5wcgpiDgYTI-YA7OY80moTTP76GI11fauDciHiYkLiIEdOge0yg/exec";
-                String sheetsURL = "https://script.google.com/macros/s/AKfycbwNWFL0eWhLGpAeziiP9LR9FwpoWKA6zsM9xF_sCzASZAwNyWmne_jpkx7DRtXJR28j/exec";
+                String sheetsURL = "https://script.google.com/macros/s/AKfycbxln6nJFzk0sJGsjEg9QtOpyHqNfxKA03jJfepV9PYIJ2IhprDKRtbUX9CrGdux_62H/exec";
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, sheetsURL,
                         new Response.Listener<String>() {
                             @Override
