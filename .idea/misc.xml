@@ -5,8 +5,9 @@
       <map>
         <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_boardingscreen.xml" value="0.1" />
         <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_main.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/list_item_row.xml" value="0.12681159420289856" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
