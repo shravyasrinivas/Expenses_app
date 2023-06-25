@@ -280,11 +280,11 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="79dp"
         android:layout_marginEnd="150dp"
+        android:background="#B0B8A0"
+        android:fontFamily="@font/poppins_light"
         android:text="View items"
         android:textColor="@color/white"
-        android:background="#B0B8A0"
-        android:textStyle="bold"
-        android:fontFamily="@font/poppins_light"/>
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

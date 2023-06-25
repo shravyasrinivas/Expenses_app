@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_boardingscreen.xml" value="0.1" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/drawable/button.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/drawable/dropdown.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/drawable/rounded_edittext.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/drawable/rounded_submit.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_boardingscreen.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/activity_main.xml" value="0.1490036231884058" />
         <entry key="..\:/Users/Shravya/AndroidStudioProjects/Apptogooglesheets/app/src/main/res/layout/list_item_row.xml" value="0.12681159420289856" />
       </map>
